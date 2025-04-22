@@ -1,19 +1,14 @@
 package atu.ie;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
-
 public class Calculator {
-    private Calculator calculator;
-
-    @BeforeEach
-    void setup() {
-        calculator = new Calculator();
-    }
-
-    @Test
-    void testAddition() {
-        assertEquals(5, calculator.add(2, 3));
+        public int add(int a, int b) {
+            return a + b;
+        }
+    public int subtract(int a, int b) {
+        int result = a - b;
+        if (result < 0) {
+            throw new IllegalStateException("Negative result not allowed.");
+        }
+        return result;
     }
 }
