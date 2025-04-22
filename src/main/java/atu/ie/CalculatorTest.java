@@ -21,5 +21,10 @@ public class CalculatorTest {
         Exception exception = assertThrows(IllegalStateException.class, () -> calculator.subtract(3, 5));
         assertEquals("Negative result not allowed.", exception.getMessage());
     }
+    @Test
+    void testDivisionByZero() {
+        assertThrows(ArithmeticException.class, () -> calculator.divide(5, 0));
+    }
+
 
 }
