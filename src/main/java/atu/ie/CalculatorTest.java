@@ -26,5 +26,11 @@ public class CalculatorTest {
         assertThrows(ArithmeticException.class, () -> calculator.divide(5, 0));
     }
 
+    @Test
+    void testMultiplicationOverflow() {
+        assertThrows(UnsupportedOperationException.class, () -> calculator.multiply(Integer.MAX_VALUE, 2));
+    }
+
+
 
 }
